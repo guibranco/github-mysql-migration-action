@@ -1,5 +1,11 @@
 name: 'MySQL migration'
+author: 'guibranco'
 description: 'Manage versioned SQL files for MariaDB/MySQL database'
+
+branding:
+  icon: database
+  color: green
+
 inputs:
   operation:
     description: 'Which operation to execute. One of: dry-run, migrate, check, integrity
