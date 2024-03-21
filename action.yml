@@ -16,7 +16,10 @@ inputs:
   mysql-database:
     description: 'Database name'
     required: true
-    default: 'example'  
+    default: 'example'
+outputs:
+  time:
+    description: 'The time we ran this action'
 runs:
   using: 'docker'
   image: 'Dockerfile'
