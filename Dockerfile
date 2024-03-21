@@ -3,8 +3,8 @@ FROM alpine:3.10
 # Labels for http://label-schema.org/rc1/#build-time-labels
 # And for https://github.com/opencontainers/image-spec/blob/master/annotations.md
 # And for https://help.github.com/en/actions/building-actions/metadata-syntax-for-github-actions
-ARG NAME="GitHub Action for migrate versioned SQL files for MariaDB/MySQL"
-ARG DESCRIPTION="GitHub Action for migrate versioned SQL files for MariaDB/MySQL"
+ARG NAME="GitHub action to manage MariaDB/MySQL versioned migrations"
+ARG DESCRIPTION=" A GitHub action to manage MariaDB/MySQL versioned migrations"
 ARG REPO_URL="https://github.com/guibranco/github-mysql-migration-action"
 ARG AUTHOR="Guilherme Branco Stracini / GuiBranco / guilherme@guilhermebranco.com.br"
 ARG HOMEPAGE="https://guibranco.github.io/"
