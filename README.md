@@ -4,14 +4,14 @@
 
 ## Usage
 
+* `OPERATION` (required)
+The operation to be executed (one of: `dry-run`, `migrate`, `check`, `integrity`)
 * `MYSQL_HOST` (required)
 The MariaDB/MySQL host address (domain or IPv4 address).
 * `MYSQL_USER` (required)  
 The username to connect in the MySQL/MariaDB host.
 * `MYSQL_DATABASE` (required)
 The database name.
-* `OPERATION` (required)
-The operation to be executed (one of: `dry-run`, `migrate`, `check`, `integrity`)
 * `INTEGRITY_COMMANDS_FILE` (optional)
 When the `OPERATION` is `integrity`, this parameter receives the file with a list (one per line) of commands to run and validate the presence of data in the database.
 
@@ -22,6 +22,7 @@ None.
 ## Example
 
 ```yml
+
 name: "test"
 on:
   pull_request:
@@ -39,10 +40,10 @@ on:
       - name: Run the action
         uses: guibranco/github-mysql-migration-action@latest
         env:
-          MYSQL_PWD: ${{ secrets.MYSQL_PWD }} # Pass the password as an environment variable to always keep it secret.
+          MYSQL_PWD: ${{ secrets.MYSQL_PWD }} # Pass the password as an environment variable to keep it secret.
         with:
+          OPERATION: migrate
           MYSQL_HOST: 127.0.0.1
           MYSQL_USER: test
-          MYSQL_DATAABSE: test
-          OPERATION: migrate
+          MYSQL_DATAABSE: test          
 ```
