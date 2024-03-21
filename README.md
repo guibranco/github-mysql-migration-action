@@ -1,15 +1,3 @@
-<p align="center">
-  <a href="https://github.com/guibranco/github-mysql-migration-action">
-    <img src="https://github.com/guibranco/github-mysql-migration-action/actions/workflows/ci.yml/badge.svg" alt="CI status">
-  </a>
-  <a href="https://github.com/guibranco/github-mysql-migration-action">
-    <img src="https://github.com/guibranco/github-mysql-migration-action/actions/workflows/linter.yml/badge.svg" alt="Linter status">
-  </a>
-  <a href="https://wakatime.com/badge/github/guibranco/github-mysql-migration-action">
-    <img src="https://wakatime.com/badge/github/guibranco/github-mysql-migration-action.svg" alt="wakatime">
-  </a>
-</p>
-
 # GitHub MySQL migration action
 
 🧰🎲 A GitHub action to manage MariaDB/MySQL versioned migrations.
@@ -35,7 +23,7 @@ None.
 
 ```yml
 name: "test"
-on: # run on any PRs and main branch changes
+on:
   pull_request:
   push:
     branches:
@@ -48,12 +36,12 @@ on: # run on any PRs and main branch changes
       
       - uses: actions/checkout@v4
   
-      - name: Run the action # You would run your tests before this using the output to set state/desc
+      - name: Run the action
         uses: guibranco/github-mysql-migration-action@latest
         env:
-          MYSQL_PWD: test
+          MYSQL_PWD: ${{ secrets.MYSQL_PWD }} # Pass the password as an environment variable to always keep it secret.
         with:
-          MYSQL_HOSTL: 127.0.0.1
+          MYSQL_HOST: 127.0.0.1
           MYSQL_USER: test
           MYSQL_DATAABSE: test
           OPERATION: migrate
