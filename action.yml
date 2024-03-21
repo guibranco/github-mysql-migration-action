@@ -1,0 +1,27 @@
+name: 'MySQL migration'
+description: 'Manage versioned SQL files for MariaDB/MySQL database'
+inputs:
+  operation:
+    description: 'Which operation to execute. One of: dry-run, migrate, check, integrity
+    required: true
+    default: 'migrate'
+  mysql-host:
+    description: 'MariaDB/Mysql host (domain or IPv4)'
+    required: true
+    default: '127.0.0.1'
+  mysql-user:
+    description: 'Database username'
+    required: true
+    default: 'root'
+  mysql-database:
+    description: 'Database name'
+    required: true
+    default: 'example'
+outputs:
+  time:
+    description: 'The time we ran this action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.operation }} ${{ inputs.mysql-host }} ${{ inputs.mysql-user }} ${{ inputs.mysql-database }}
