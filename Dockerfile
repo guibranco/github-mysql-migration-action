@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.16.9
 
 # Labels for http://label-schema.org/rc1/#build-time-labels
 # And for https://github.com/opencontainers/image-spec/blob/master/annotations.md
