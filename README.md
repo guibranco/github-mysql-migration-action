@@ -9,16 +9,23 @@
 
 ## Usage
 
+### Parameters
+
 * `OPERATION` (required)
-The operation to be executed (one of: `dry-run`, `migrate`, `check`, `integrity`)
+The operation to be executed (one of: `dry-run`, `migrate`, `check`, or `integrity`)
 * `MYSQL_HOST` (required)
 The MariaDB/MySQL host address (domain or IPv4 address).
-* `MYSQL_USER` (required)  
+* `MYSQL_USER` (required)
 The username to connect in the MySQL/MariaDB host.
 * `MYSQL_DATABASE` (required)
 The database name.
 * `INTEGRITY_COMMANDS_FILE` (optional)
 When the `OPERATION` is `integrity`, this parameter receives the file with a list (one per line) of commands to run and validate the presence of data in the database.
+
+### Environment variables
+
+* `MYSQL_PWD` (optional)
+The password to connect to the MySQL/MariaDB host. This needs to be set as an environment variable to keep it safe.
 
 ### Outputs
 
