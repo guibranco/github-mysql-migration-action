@@ -8,7 +8,7 @@ branding:
 
 inputs:
   operation:
-    description: 'Which operation to execute. One of: dry-run, migrate, check, integrity
+    description: 'Which operation to execute. One of: dry-run, migrate, check, integrity'
     required: true
     default: 'migrate'
   mysql-host:
