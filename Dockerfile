@@ -8,7 +8,7 @@ ARG DESCRIPTION=" A GitHub action to manage MariaDB/MySQL versioned migrations"
 ARG REPO_URL="https://github.com/guibranco/github-mysql-migration-action"
 ARG AUTHOR="Guilherme Branco Stracini / GuiBranco / guilherme@guilhermebranco.com.br"
 ARG HOMEPAGE="https://guibranco.github.io/"
-ARG BUILD_DATE=2024-03-22T00:00:00Z
+ARG BUILD_DATE=2024-08-23T17:40:00Z
 ARG VCS_REF=abcdef1
 ARG VERSION=v0.0
 LABEL \
