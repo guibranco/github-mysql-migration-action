@@ -59,7 +59,3 @@ on:
           MYSQL_USER: test
           MYSQL_DATAABSE: test          
 ```
-
-## Sample result
-
-![image](https://github.com/user-attachments/assets/fa126c06-c907-4e59-962b-1211ad7faaff)
