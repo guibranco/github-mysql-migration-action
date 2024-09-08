@@ -3,9 +3,9 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/guibranco/github-mysql-migration-action?color=green&logo=github&style=plastic&label=Last%20commit)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
 [![GitHub license](https://img.shields.io/github/license/guibranco/github-mysql-migration-action?color=green&logo=github&style=plastic&label=License)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
 
-# GitHub MySQL migration action
+# GitHub MariaDB/MySQL migration action
 
-🧰🎲 A GitHub action to manage MariaDB/MySQL versioned migrations.
+🎲 :octocat: A GitHub action to manage MariaDB/MySQL versioned migrations.
 
 ## Usage
 
