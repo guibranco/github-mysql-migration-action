@@ -19,13 +19,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: dorny/paths-filter@v3
-        id: changes
-        with:
-          filters: |
-            dist:
-              - "dist/**"
-
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v2
         with:
@@ -38,7 +31,6 @@ jobs:
           useConfigFile: true
 
       - name: Create Release
-        if: ${{ steps.changes.outputs.dist == 'true' || github.event_name == 'workflow_dispatch' }}
         uses: ncipollo/release-action@v1.14.0
         with:
           allowUpdates: false
