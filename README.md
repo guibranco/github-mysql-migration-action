@@ -1,9 +1,12 @@
+# GitHub MariaDB/MySQL migration action
+
 [![GitHub repo](https://img.shields.io/badge/GitHub-guibranco%2Fgithub--mysql--migration--action-green.svg?style=plastic&logo=github)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/guibranco/github-mysql-migration-action?color=green&label=Code%20size&style=plastic&logo=github)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
 [![GitHub last commit](https://img.shields.io/github/last-commit/guibranco/github-mysql-migration-action?color=green&logo=github&style=plastic&label=Last%20commit)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
 [![GitHub license](https://img.shields.io/github/license/guibranco/github-mysql-migration-action?color=green&logo=github&style=plastic&label=License)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
 
-# GitHub MariaDB/MySQL migration action
+![CI](https://github.com/guibranco/github-mysql-migration-action/actions/workflows/ci.yml/badge.svg)
+[![wakatime](https://wakatime.com/badge/github/guibranco/github-mysql-migration-action.svg)](https://wakatime.com/badge/github/guibranco/github-mysql-migration-action)
 
 🎲 :octocat: A GitHub action to manage MariaDB/MySQL versioned migrations.
 
