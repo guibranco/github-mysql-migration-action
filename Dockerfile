@@ -8,7 +8,7 @@ ARG DESCRIPTION=" A GitHub action to manage MariaDB/MySQL versioned migrations"
 ARG REPO_URL="https://github.com/guibranco/github-mysql-migration-action"
 ARG AUTHOR="Guilherme Branco Stracini / GuiBranco / guilherme@guilhermebranco.com.br"
 ARG HOMEPAGE="https://guibranco.github.io/"
-ARG BUILD_DATE=2024-08-23T17:40:00Z
+ARG BUILD_DATE=2024-12-25T23:18:00Z
 ARG VCS_REF=abcdef1
 ARG VERSION=v0.0
 LABEL \
@@ -30,7 +30,7 @@ LABEL \
   org.opencontainers.image.created="${BUILD_DATE}" \
   org.opencontainers.image.authors="${AUTHOR}" \
   org.opencontainers.image.url="${HOMEPAGE}" \
-  org.opencontainers.image.documentation="${REPO_URL}/blob/master/README.md" \
+  org.opencontainers.image.documentation="${REPO_URL}/blob/main/README.md" \
   org.opencontainers.image.source="${REPO_URL}" \
   org.opencontainers.image.version="${VERSION}" \
   org.opencontainers.image.revision="${VCS_REF}" \
