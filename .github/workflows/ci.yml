@@ -26,11 +26,14 @@ jobs:
         id: test-action
         uses: ./
         with:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          mysql-host: ${{ secrets.MYSQL_HOST }}
+          mysql-user: ${{ secrets.MYSQL_USER }}
+          mysql-database: ${{ secrets.MYSQL_DATABASE }}
+          operation: "test"
 
       - name: Print Output
         id: output
-        run: echo "${{ steps.test-action.outputs.leaked-secrets }}"
+        run: echo "${{ steps.test-action.outputs.time }}"
 
   create-release:
     name: Create release
