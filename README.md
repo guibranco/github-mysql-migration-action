@@ -34,6 +34,16 @@ The password to connect to the MySQL/MariaDB host. This needs to be set as an en
 
 None.
 
+## Local Development
+
+This repository supports local development and testing using the [@github/local-action](https://github.com/github/local-action) utility. This tool allows you to run and debug the action on your local machine without having to push changes to GitHub.
+
+To get started with local development:
+
+1. Ensure you have Node.js and npm installed
+2. Run `npm install` to install dependencies
+3. Run `npm run local` to execute the action locally
+
 ## Example
 
 ```yml
