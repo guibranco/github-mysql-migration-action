@@ -1,0 +1,11 @@
+{
+  "name": "github-mysql-migration-action",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "local": "npx @github/local-action"
+  },
+  "devDependencies": {
+    "@github/local-action": "^0.2.0"
+  }
+}
