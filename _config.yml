@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
-title: "🎲 :octocat: A GitHub action to manage MariaDB/MySQL versioned migrations"
-description: "🎲 :octocat: A GitHub action to manage MariaDB/MySQL versioned migrations."
+title: "🎲 :octocat: A GitHub action to manage SQL databases versioned migrations"
+description: "🎲 :octocat: A GitHub action to manage SQL datbaases versioned migrations."
 show_downloads: true
