@@ -1,14 +1,14 @@
-# GitHub MariaDB/MySQL migration action
+# GitHub database migration action
 
-[![GitHub repo](https://img.shields.io/badge/GitHub-guibranco%2Fgithub--mysql--migration--action-green.svg?style=plastic&logo=github)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/guibranco/github-mysql-migration-action?color=green&label=Code%20size&style=plastic&logo=github)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
-[![GitHub last commit](https://img.shields.io/github/last-commit/guibranco/github-mysql-migration-action?color=green&logo=github&style=plastic&label=Last%20commit)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
-[![GitHub license](https://img.shields.io/github/license/guibranco/github-mysql-migration-action?color=green&logo=github&style=plastic&label=License)](https://github.com/guibranco/github-mysql-migration-action "shields.io")
+[![GitHub repo](https://img.shields.io/badge/GitHub-guibranco%2Fgithub--database--migration--action-green.svg?style=plastic&logo=github)](https://github.com/guibranco/github-database-migration-action "shields.io")
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/guibranco/github-database-migration-action?color=green&label=Code%20size&style=plastic&logo=github)](https://github.com/guibranco/github-database-migration-action "shields.io")
+[![GitHub last commit](https://img.shields.io/github/last-commit/guibranco/github-database-migration-action?color=green&logo=github&style=plastic&label=Last%20commit)](https://github.com/guibranco/github-database-migration-action "shields.io")
+[![GitHub license](https://img.shields.io/github/license/guibranco/github-database-migration-action?color=green&logo=github&style=plastic&label=License)](https://github.com/guibranco/github-database-migration-action "shields.io")
 
-![CI](https://github.com/guibranco/github-mysql-migration-action/actions/workflows/ci.yml/badge.svg)
-[![wakatime](https://wakatime.com/badge/github/guibranco/github-mysql-migration-action.svg)](https://wakatime.com/badge/github/guibranco/github-mysql-migration-action)
+![CI](https://github.com/guibranco/github-database-migration-action/actions/workflows/ci.yml/badge.svg)
+[![wakatime](https://wakatime.com/badge/github/guibranco/github-database-migration-action.svg)](https://wakatime.com/badge/github/guibranco/github-database-migration-action)
 
-🎲 :octocat: A GitHub action to manage MariaDB/MySQL versioned migrations.
+🎲 :octocat: A GitHub Action to manage versioned database migrations across multiple database drivers.
 
 ## Usage
 
@@ -16,19 +16,21 @@
 
 * `OPERATION` (required)
 The operation to be executed (one of: `dry-run`, `migrate`, `check`, or `integrity`)
-* `MYSQL_HOST` (required)
-The MariaDB/MySQL host address (domain or IPv4 address).
-* `MYSQL_USER` (required)
-The username to connect in the MySQL/MariaDB host.
-* `MYSQL_DATABASE` (required)
+* `DRIVER` (required)
+The driver to use (one of: `mysql`, `mariadb`, `postgresql`, `mssql` or `oracle11g`)
+* `HOST` (required)
+The database host address (domain or IPv4).
+* `USER` (required)
+The username to connect to the database host.
+* `DATABASE` (required)
 The database name.
 * `INTEGRITY_COMMANDS_FILE` (optional)
 When the `OPERATION` is `integrity`, this parameter receives the file with a list (one per line) of commands to run and validate the presence of data in the database.
 
 ### Environment variables
 
-* `MYSQL_PWD` (optional)
-The password to connect to the MySQL/MariaDB host. This needs to be set as an environment variable to keep it safe.
+* `DATABASE_PWD` (optional)
+The password to connect to the database host. Set as an environment variable to keep it secure.
 
 ### Outputs
 
@@ -53,12 +55,13 @@ on:
       - uses: actions/checkout@v4
   
       - name: Run the action
-        uses: guibranco/github-mysql-migration-action@latest
+        uses: guibranco/github-database-migration-action@latest
         env:
-          MYSQL_PWD: ${{ secrets.MYSQL_PWD }} # Pass the password as an environment variable to keep it secret.
+          DATABASE_PWD: ${{ secrets.DATABASE_PWD }} # Pass the password as an environment variable to keep it secret.
         with:
           OPERATION: migrate
-          MYSQL_HOST: 127.0.0.1
-          MYSQL_USER: test
-          MYSQL_DATAABSE: test          
+          DRIVER: mysql
+          HOST: 127.0.0.1
+          USER: test
+          DATABASE: test          
 ```
