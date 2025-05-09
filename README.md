@@ -57,7 +57,7 @@ on:
       - name: Run the action
         uses: guibranco/github-database-migration-action@latest
         env:
-          DATABASE_PWD: ${{ secrets.MYSQL_PWD }} # Pass the password as an environment variable to keep it secret.
+          DATABASE_PWD: ${{ secrets.DATABASE_PWD }} # Pass the password as an environment variable to keep it secret.
         with:
           OPERATION: migrate
           DRIVER: mysql
