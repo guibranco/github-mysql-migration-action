@@ -26,9 +26,10 @@ jobs:
         id: test-action
         uses: ./
         with:
-          mysql-host: ${{ secrets.MYSQL_HOST }}
-          mysql-user: ${{ secrets.MYSQL_USER }}
-          mysql-database: ${{ secrets.MYSQL_DATABASE }}
+          driver: 'mysql'
+          host: ${{ secrets.MYSQL_HOST }}
+          user: ${{ secrets.MYSQL_USER }}
+          database: ${{ secrets.MYSQL_DATABASE }}
           operation: "test"
 
       - name: Print Output
