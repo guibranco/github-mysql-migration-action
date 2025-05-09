@@ -8,7 +8,7 @@
 ![CI](https://github.com/guibranco/github-database-migration-action/actions/workflows/ci.yml/badge.svg)
 [![wakatime](https://wakatime.com/badge/github/guibranco/github-database-migration-action.svg)](https://wakatime.com/badge/github/guibranco/github-database-migration-action)
 
-🎲 :octocat: A GitHub action to manage database (MariaDB/MySQL) versioned migrations.
+🎲 :octocat: A GitHub Action to manage versioned database migrations across multiple database drivers.
 
 ## Usage
 
