@@ -30,7 +30,7 @@ When the `OPERATION` is `integrity`, this parameter receives the file with a lis
 ### Environment variables
 
 * `DATABASE_PWD` (optional)
-The password to connect to the database (MySQL/MariaDB) host. This needs to be set as an environment variable to keep it safe.
+The password to connect to the database host. Set as an environment variable to keep it secure.
 
 ### Outputs
 
