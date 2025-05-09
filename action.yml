@@ -36,4 +36,8 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.operation }} ${{ inputs.driver }} ${{ inputs.host }} ${{ inputs.user }} ${{ inputs.database }}
+    - ${{ inputs.operation }}
+    - ${{ inputs.driver }}
+    - ${{ inputs.host }}
+    - ${{ inputs.user }}
+    - ${{ inputs.database }}
