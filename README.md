@@ -19,7 +19,7 @@ The operation to be executed (one of: `dry-run`, `migrate`, `check`, or `integri
 * `DRIVER` (required)
 The driver to use (one of: `mysql`, `mariadb`, `postgresql`, `mssql` or `oracle11g`)
 * `HOST` (required)
-The database (MariaDB/MySQL) host address (domain or IPv4 address).
+The database host address (domain or IPv4).
 * `USER` (required)
 The username to connect to the database host.
 * `DATABASE` (required)
