@@ -1,6 +1,6 @@
-name: 'MySQL migration'
+name: 'Database migration'
 author: 'guibranco'
-description: 'Manage versioned SQL files for MariaDB/MySQL database'
+description: 'Manage versioned SQL files for database migrations'
 
 branding:
   icon: database
@@ -11,15 +11,19 @@ inputs:
     description: 'Which operation to execute. One of: dry-run, migrate, check, integrity'
     required: true
     default: 'migrate'
-  mysql-host:
-    description: 'MariaDB/Mysql host (domain or IPv4)'
+  driver:
+    description: 'Which driver to use. One of: mysql, mariadb, postgresql, mssql, oracle11g'
+    required: true
+    default: 'mysql'
+  host:
+    description: 'Database host (domain or IPv4)'
     required: true
     default: '127.0.0.1'
-  mysql-user:
+  user:
     description: 'Database username'
     required: true
     default: 'root'
-  mysql-database:
+  database:
     description: 'Database name'
     required: true
     default: 'example'
@@ -32,4 +36,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.operation }} ${{ inputs.mysql-host }} ${{ inputs.mysql-user }} ${{ inputs.mysql-database }}
+    - ${{ inputs.operation }} ${{ inputs.driver }} ${{ inputs.host }} ${{ inputs.user }} ${{ inputs.database }}
